@@ -9,4 +9,9 @@ if(isset($_SESSION['usuario']) && is_object($_SESSION['usuario'])){
     $_SESSION['tipo'] = null;
 }
 
+if(!isset($_SESSION['autenticacao']) || $_SESSION['autenticacao'] != 'SIM'){
+    header('Location: index.php?login=erro2');
+    exit;
+}
+
 ?>
