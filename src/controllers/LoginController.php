@@ -19,9 +19,13 @@ class LoginController{
                 $_SESSION['autenticacao'] = 'SIM';
                 $_SESSION['id'] = $user->id;
                 $_SESSION['tipo'] = $user->tipo;  
-                header('Location: ../chamado/src/view/home.php');          
+                header('Location: ../chamado/src/view/home.php');      
+                exit;    
            } 
         }
+        $_SESSION['autenticacao'] = 'NAO';
+        header('Location: index.php?login=erro');
+        exit;
     }
 }
 
