@@ -2,6 +2,13 @@
 
   require_once '../../validador_acesso.php';
 
+  $chamados = array();
+  $arquivo = fopen('../../arquivo.hd', 'r');
+  while(!feof($arquivo)){
+    $registro = fgets($arquivo);
+    $chamados[] = $registro;
+  }
+
 ?>
 
 <!-- O conteúdo do arquivo consultar_chamado.php permanece o mesmo, mas você pode querer otimizar o código CSS e HTML. -->
