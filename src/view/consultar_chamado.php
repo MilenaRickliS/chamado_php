@@ -9,6 +9,8 @@
     $chamados[] = $registro;
   }
 
+  fclose($arquivo);
+
 ?>
 
 <!-- O conteúdo do arquivo consultar_chamado.php permanece o mesmo, mas você pode querer otimizar o código CSS e HTML. -->
@@ -53,9 +55,24 @@
             
             <div class="card-body">
 
-              <?php 
+              <?php foreach($chamados as $chamado){ ?>
 
-                ?>
+                <?php 
+                  
+                  $chamado_dados = explode('#', $chamado);
+
+                  if($_SESSION['tipo'] == 2){
+                    if($_SESSION['id'] != $chamado_dados[0]){
+                      continue;
+                    }
+                  }
+                  
+                  if(count($chamado_dados) < 3){
+                    continue;
+                  }
+
+                  ?>
+
                 <div class="card mb-3 bg-light">
                   <div class="card-body">
                     <h5 class="card-title"><?=$chamado_dados[1]?></h5>
@@ -65,7 +82,7 @@
                   </div>
                 </div>
 
-              <?php  ?>
+              <?php } ?>
 
               <div class="row mt-5">
                 <div class="col-6">
