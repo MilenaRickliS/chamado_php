@@ -1,4 +1,7 @@
-<?php
+<?php 
+
+  require_once '../../validador_acesso.php';
+
 ?>
 
 <!-- O conteúdo do arquivo home.php permanece o mesmo, mas você pode querer otimizar o código CSS e HTML. -->
