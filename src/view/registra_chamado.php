@@ -1,7 +1,7 @@
 <?php 
 
   session_start();
-  require_once '../chamado_php/validador_acesso.php'; 
+  require_once '../../validador_acesso.php';
   
   $titulo = str_replace("#", "-", $_POST['titulo']);
   $categoria = str_replace("#", "-", $_POST['categoria']);

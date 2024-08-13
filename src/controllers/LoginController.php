@@ -2,6 +2,7 @@
 
 require_once '../chamado_php/src/models/User.php';
 
+
 class LoginController{
 
     private $usuarios;
