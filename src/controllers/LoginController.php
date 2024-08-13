@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../chamado/src/models/User.php';
+require_once '../chamado_php/src/models/User.php';
 
 class LoginController{
 

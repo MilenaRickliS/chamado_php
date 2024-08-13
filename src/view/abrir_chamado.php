@@ -1,6 +1,6 @@
 <?php 
 
-  require_once '../../validador_acesso.php';
+  require_once '../chamado_php/validador_acesso.php';
 
 ?>
 <!-- O conteúdo do arquivo abrir_chamado.php permanece o mesmo, mas você pode querer otimizar o código CSS e HTML. -->

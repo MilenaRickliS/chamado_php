@@ -1,6 +1,6 @@
 <?php 
 
-  require_once '../../validador_acesso.php';
+  require_once '../chamado_php/validador_acesso.php';
 
   $chamados = array();
   $arquivo = fopen('../../arquivo.hd', 'r');

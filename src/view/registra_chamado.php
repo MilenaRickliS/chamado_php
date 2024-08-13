@@ -1,7 +1,7 @@
 <?php 
 
   session_start();
-  require_once '../../validador_acesso.php'; 
+  require_once '../chamado_php/validador_acesso.php'; 
   
   $titulo = str_replace("#", "-", $_POST['titulo']);
   $categoria = str_replace("#", "-", $_POST['categoria']);
@@ -10,7 +10,7 @@
   $texto = $_SESSION['id']. '#' . $titulo . '#' . $categoria . '#' . $descricao . PHP_EOL;
 
   $arquivo = fopen("../../arquivo.hd", "a");
-  
+
   fwrite($arquivo, $texto);
 
   fclose($arquivo);
