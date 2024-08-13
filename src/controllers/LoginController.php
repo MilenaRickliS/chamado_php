@@ -19,7 +19,7 @@ class LoginController{
                 $_SESSION['autenticacao'] = 'SIM';
                 $_SESSION['id'] = $user->id;
                 $_SESSION['tipo'] = $user->tipo;  
-                header('Location: ../chamado/src/view/home.php');      
+                header('Location: ../chamado_php/src/view/home.php');      
                 exit;    
            } 
         }
